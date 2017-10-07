@@ -13,7 +13,7 @@ class Location extends Coordinate {
       super(latitude: new LocationDegrees(degrees: latitude), longitude :new LocationDegrees(degrees: longitude));
 
     Duration timeDifference({Location location})  {
-        return location.timestamp.difference(location.timestamp);
+        return this.timestamp.difference(location.timestamp);
     }
 
     double distanceTo(Location location) {

@@ -9,10 +9,12 @@ class StayPointIdentification {
   StayPointIdentification(this.threshold);
 
   List<StayPoint> process({List<Location> locations}) {
-    return [];
+      OfflineIdentification offline = new OfflineIdentification();
+      return offline.process(threshold: this.threshold, locations: locations);
   }
 
   StayPoint processBuffered({Location location}) {
-    return null;
+      OnlineIdentification online = new OnlineIdentification();
+      return online.process(threshold: this.threshold, location: location);
   }
 }

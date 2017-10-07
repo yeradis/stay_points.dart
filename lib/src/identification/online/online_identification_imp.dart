@@ -5,12 +5,12 @@ import '../model/stay_point.dart';
 import '../model/threshold.dart';
 
 abstract class OnlineRepository {
-    Future<StayPoint> process(Threshold Threshold, Location location);
+    StayPoint process({Threshold threshold, Location location});
 }
 
 class OnlineIdentification implements OnlineRepository {
     @override
-    Future<StayPoint> process(Threshold threshold, Location location) {
-        // TODO: implement process
+    StayPoint process({Threshold threshold, Location location}) {
+        throw new UnimplementedError("Not yet implemented");
     }
 }

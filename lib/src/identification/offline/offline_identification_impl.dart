@@ -5,23 +5,24 @@ import '../model/stay_point.dart';
 import '../model/threshold.dart';
 
 abstract class OfflineRepository {
-    Future<List<StayPoint>> process(Threshold threshold, List<Location> locations);
+    List<StayPoint> process({Threshold threshold, List<Location> locations});
 }
 
 class OfflineIdentification implements OfflineRepository {
-    @override
-    Future<List<StayPoint>> process(Threshold threshold, List<Location> locations) {
-        List<StayPoint> result;
+
+    List<StayPoint> process({Threshold threshold, List<Location> locations}) {
+        List<StayPoint> result = [];
         Location locationStart, locationEnd;
         double distance;
 
         int pStart = 0;
         int pEnd = 0;
-        int pCount = locations.length;
+
+        int pCount = locations != null ? locations.length : 0;
 
         if (pCount <= 1) {
             print("Provided location path is not enough");
-            return null;
+            return result;
         }
 
         while (pStart < pCount) {
@@ -49,15 +50,19 @@ class OfflineIdentification implements OfflineRepository {
             }
             pStart += 1;
         }
-        return new Future(() => result);
+        return result;
     }
 
-    /// used to avoid noise like having location1 with a a low accurancy
-    /// and the the next point arrive with a cell tower accuracy > 1400 meters
+    /// used to avoid noise like having the previous location with a a low accuracy
+    /// and the current location with a cell tower accuracy > 1400 meters
+    /// making the process fail because will pass threshold validation when it should not
     bool continueWith({Location newLocation,lastLocation}) {
-        //TODO add the accuracy value and find a better way to avoid noise
-        //example: user entered a tunnel and at exit the locations will have some values that
+        // TODO add the accuracy value and find a better way to avoid noise
+        // example: user entered a tunnel and at exit the locations will have some values that
         // can affect the identification creating a new cluster path
+        // this is a very simple approach, a better one can be:
+        // distance(newLocation,lastLocation) > location accuracy
+        // but this depends on the distance threshold
         //return lastLocation.horizontalAccuracy + newLocation.horizontalAccuracy < 200
         return true;
     }
