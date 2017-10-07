@@ -18,10 +18,10 @@ then will iterate over the full path to extract candidate locations to form the 
 
 Example 1: Cantidate locations to create the stay points
 in green the full path, in red the locations that will be part of the stay-point cause they pass the threshold validation
-![before stay points](https://github.com/yeradis/stay_points.dart/blob/master/resources/raw_gps_cluster.png)
+![before stay points](https://github.com/yeradis/stay_points.dart/raw/master/resources/raw_gps_cluster.png)
 
 Example 2: Stay points
-![stay_points](https://github.com/yeradis/stay_points.dart/blob/master/resources/stay_points.png)
+![stay_points](https://github.com/yeradis/stay_points.dart/raw/master/resources/stay_points.png)
 
 Example of usage:
 
