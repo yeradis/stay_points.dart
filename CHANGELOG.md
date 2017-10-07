@@ -1,5 +1,6 @@
 # Changelog
 
-## 0.0.1
+## 0.0.5
 
-- Initial version
+- Initial version with offline stay-point detection
+offline = grab a full path, at at the end process the list of locations

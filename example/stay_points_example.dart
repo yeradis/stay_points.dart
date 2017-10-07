@@ -1,7 +1,7 @@
 import 'package:stay_points/stay_points.dart';
 
 main() {
-    Threshold threshold = new Threshold(minimumTime: new Duration(minutes: 4), minimumDistance: 20.0);
+    Threshold threshold = new Threshold(minimumTime: new Duration(minutes: 4), minimumDistance: new Distance(meters: 20.0));
 
     var extractor = new StayPointIdentification(threshold);
     DateTime date1 = new DateTime(2017, 9, 27, 13, 06, 29);
@@ -20,6 +20,6 @@ main() {
     List<StayPoint> stayPoints = extractor.process(locations: [location1, location2]);
     StayPoint first = stayPoints.first;
     int detected = stayPoints.length;
-    print("Stay-points detected for the provided location path is: ${detected}");
+    print("Stay-points detected for the provided location path: ${detected}");
     print("First Stay-point detected centroid: ${first.latitude.degrees},${first.longitude.degrees}, arrival: ${first.arrival}, departurde: ${first.departure}");
 }

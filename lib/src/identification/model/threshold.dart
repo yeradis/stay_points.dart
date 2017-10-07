@@ -1,6 +1,8 @@
+import 'distance.dart';
+
 class Threshold {
     final Duration minimumTime;
-    final double minimumDistance;
+    final Distance minimumDistance;
 
     Threshold({this.minimumTime, this.minimumDistance});
 }

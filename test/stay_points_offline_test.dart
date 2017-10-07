@@ -13,7 +13,7 @@ void main() {
 
         setUp(() {
             Threshold threshold = new Threshold(
-                minimumTime: new Duration(minutes: 4), minimumDistance: 20.0);
+                minimumTime: new Duration(minutes: 4), minimumDistance: new Distance(meters: 20.0));
             extractor = new StayPointIdentification(threshold);
         });
 

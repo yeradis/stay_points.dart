@@ -1,17 +1,14 @@
 name: stay_points
-description: Stay-point Identification for Dart
+description: Stay points/meaningful locations identification
 version: 0.0.1
 homepage: https://www.yeradis.com
-author: yeradis <yeradis@gmail.com.com>
+author: Yeradis P. Barbosa Marrero <yeradis@gmail.com>
 
 dependencies:
   great_circle_distance: ^0.0.5
 
 environment:
   sdk: '>=1.20.1 <2.0.0'
-
-#dependencies:
-#  path: ^1.4.1
 
 dev_dependencies:
   test: ^0.12.0

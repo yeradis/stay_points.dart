@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import '../model/location.dart';
 import '../model/stay_point.dart';
 import '../model/threshold.dart';
@@ -33,9 +31,9 @@ class OfflineIdentification implements OfflineRepository {
                 locationEnd = locations[pEnd];
 
                 distance = locationStart.distanceTo(locationEnd);
-                bool validated = continueWith(newLocation: locationEnd, lastLocation: locations[pEnd - 1]);
+                bool validated = continueWithCurrent(current: locationEnd, previous: locations[pEnd - 1]);
 
-                if (validated && distance > threshold.minimumDistance) {
+                if (validated && distance > threshold.minimumDistance.inMeters) {
                     Duration timespan = locationStart.timeDifference(location: locationEnd);
 
                     if (timespan.inSeconds.abs() > threshold.minimumTime.inSeconds.abs()) {
@@ -56,7 +54,7 @@ class OfflineIdentification implements OfflineRepository {
     /// used to avoid noise like having the previous location with a a low accuracy
     /// and the current location with a cell tower accuracy > 1400 meters
     /// making the process fail because will pass threshold validation when it should not
-    bool continueWith({Location newLocation,lastLocation}) {
+    bool continueWithCurrent({Location current,previous}) {
         // TODO add the accuracy value and find a better way to avoid noise
         // example: user entered a tunnel and at exit the locations will have some values that
         // can affect the identification creating a new cluster path
