@@ -1,5 +1,7 @@
-# Stay Points
+# Stay Points ![Travis status][travis_status]
 
 Stay-point Identification for Dart.
 
 In a nutshell, stay-points are locations that a person has stopped for some amount of time.
+
+[travis_status]: https://travis-ci.org/yeradis/stay_points.dart.svg?branch=master
