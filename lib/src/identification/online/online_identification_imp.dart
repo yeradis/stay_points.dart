@@ -10,7 +10,7 @@ abstract class OnlineRepository {
 
 class OnlineIdentification implements OnlineRepository {
     @override
-    Future<StayPoint> process(Threshold Threshold, Location location) {
+    Future<StayPoint> process(Threshold threshold, Location location) {
         // TODO: implement process
     }
 }

@@ -4,12 +4,15 @@ import 'package:stay_points/src/identification/online/online_identification_imp.
 
 class StayPointIdentification {
   bool get isAwesome => true;
+  final Threshold threshold;
 
-  List<StayPoint> extract(Threshold Threshold, List<Location> locations) {
+  StayPointIdentification(this.threshold);
+
+  List<StayPoint> process({List<Location> locations}) {
     return [];
   }
 
-  StayPoint process(Threshold Threshold, Location location) {
+  StayPoint processBuffered({Location location}) {
     return null;
   }
 }

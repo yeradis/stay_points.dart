@@ -1,6 +1,6 @@
 import 'package:stay_points/stay_points.dart';
 
 main() {
-  var awesome = new StayPointIdentification();
-  print('awesome: ${awesome.isAwesome}');
+    Threshold threshold = new Threshold(minimumTime: new Duration(minutes: 4), minimumDistance: 20.0);
+    var extractor = new StayPointIdentification(threshold);
 }

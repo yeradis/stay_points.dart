@@ -1,5 +1,5 @@
 class Threshold {
-    final double minimumTime;
+    final Duration minimumTime;
     final double minimumDistance;
 
     Threshold({this.minimumTime, this.minimumDistance});

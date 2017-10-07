@@ -10,6 +10,10 @@ class Location extends Coordinate {
     Location({this.latitude, this.longitude, this.timestamp})
         : super(latitude: latitude, longitude: longitude);
 
+    Duration timeDifference({Location location})  {
+        return location.timestamp.difference(location.timestamp);
+    }
+
     double distanceTo(Location location) {
         GreatCircleDistance greatCircle = new GreatCircleDistance.fromDegrees(
             latitude1: latitude.degrees,
