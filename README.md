@@ -21,7 +21,7 @@ in green the full path, in red the locations that will be part of the stay-point
 ![before stay points](https://github.com/yeradis/stay_points.dart/blob/master/resources/raw_gps_cluster.png)
 
 Example 2: Stay points
-![stay_points](https://github.com/yeradis/stay_points.dart/blob/master/resources/resources/stay_points.png)
+![stay_points](https://github.com/yeradis/stay_points.dart/blob/master/resources/stay_points.png)
 
 Example of usage:
 
@@ -52,7 +52,6 @@ main() {
 ```
 
 Disclaimer: This library is an implementation of the algorithm described in [Quannan Li , Yu Zheng , Xing Xie , Yukun Chen , Wenyu Liu , Wei-Ying Ma, Mining user similarity based on location history, Proceedings of the 16th ACM SIGSPATIAL international conference on Advances in geographic information systems, November 05-07, 2008, Irvine, California  doi>10.1145/1463434.1463477][1] 
-http://citeseer.ist.psu.edu/viewdoc/summary?doi=10.1.1.519.9993
 
 [1]: https://doi.org/10.1145/1463434.1463477
 [travis_status]: https://travis-ci.org/yeradis/stay_points.dart.svg?branch=master
