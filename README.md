@@ -11,7 +11,7 @@ unless you want to draw the route on the map of course.
 Example of meaningful locations can be: home, work, fruit shopping, dentist, gym, airport, etc
 
 Note that you will not receive those names, 
-you will only get a list of stay-points (a coordinate with arrival and departure time) 
+you will only get a list of stay points (a coordinate with arrival and departure time) 
 
 The idea is that you pass a full log of GPS data,
 then will iterate over the full path to extract candidate locations to form the cluster to create the stay point
@@ -20,7 +20,7 @@ Example 1: Cantidate locations to create the stay points
 in green the full path, in red the locations that will be part of the stay-point cause they pass the threshold validation
 ![before stay points](/resources/raw_gps_cluster.png)
 
-Example 2: Stay-points
+Example 2: Stay points
 ![stay_points](/resources/stay_points.png)
 
 Example of usage:
@@ -46,7 +46,7 @@ main() {
     List<StayPoint> stayPoints = extractor.process(locations: [location1, location2]);
     StayPoint first = stayPoints.first;
     int detected = stayPoints.length;
-    print("Stay-points detected for the provided location path: ${detected}");
+    print("Stay points detected for the provided location path: ${detected}");
     print("First Stay-point detected centroid: ${first.latitude.degrees},${first.longitude.degrees}, arrival: ${first.arrival}, departurde: ${first.departure}");
 }
 ```
