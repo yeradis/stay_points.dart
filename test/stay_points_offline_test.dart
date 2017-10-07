@@ -2,7 +2,7 @@ import 'package:stay_points/stay_points.dart';
 import 'package:test/test.dart';
 
 void main() {
-  group('A group of tests', () {
+  group('Offline stay-point identification', () {
     StayPointIdentification extractor;
 
     setUp(() {
@@ -10,8 +10,8 @@ void main() {
         extractor = new StayPointIdentification(threshold);
     });
 
-    test('First Test', () {
-      expect(extractor.isAwesome, isTrue);
+    test('Having nil should return nil', () {
+        expect(extractor.process(locations: null), isEmpty);
     });
   });
 }

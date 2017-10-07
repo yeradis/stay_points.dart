@@ -11,8 +11,8 @@ class LocationDegrees {
 }
 
 abstract class Coordinate {
-    LocationDegrees latitude;
-    LocationDegrees longitude;
+    final LocationDegrees latitude;
+    final LocationDegrees longitude;
 
     Coordinate({this.latitude, this.longitude});
 }
