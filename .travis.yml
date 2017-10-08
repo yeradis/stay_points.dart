@@ -1,14 +1,15 @@
 language: dart
 dart:
-- dev
+  - dev
 
 dart_task:
-- dartanalyzer: --fatal-warnings lib
+  - dartanalyzer: --fatal-warnings lib
 
 install:
-- pub global activate coveralls
+  - pub global activate coveralls
 
 script:
+  - pub get
   - pub run test
   - pub global activate coverage
   - dart --observe=8111 test/all.dart &
@@ -17,4 +18,4 @@ script:
   - pub global run coverage:format_coverage --package-root=packages --report-on lib --in coverage.json --out coverage.lcov --lcov
 
 after_success:
-- pub global run coveralls coverage.lcov
+  - pub global run coveralls coverage.lcov
