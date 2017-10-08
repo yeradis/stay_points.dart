@@ -15,7 +15,7 @@ script:
   - dart --observe=8111 test/*.dart &
   - sleep 1
   - pub global run coverage:collect_coverage --port=8111 -o coverage.json --resume-isolates
-  - pub global run coverage:format_coverage --package-root=packages --report-on lib --in coverage.json --out coverage.lcov --lcov
+  - pub global run coverage:format_coverage --package-root=lib --report-on lib --in coverage.json --out coverage.lcov --lcov
 
 after_success:
   - pub global run coveralls coverage.lcov
