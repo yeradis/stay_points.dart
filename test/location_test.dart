@@ -32,6 +32,10 @@ void main() {
         test('Distance from location1 to location2 shold be 8.529573134008796', () {
             expect(location1.distanceTo(location2), greaterThanOrEqualTo(8.529573134008796));
         });
+
+        test('Having 41.139129 should return 0.7180 radians', () {
+            expect(location1.latitude.inRadians, greaterThanOrEqualTo(0.7180));
+        });
         
     });
 }

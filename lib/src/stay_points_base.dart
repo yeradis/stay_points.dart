@@ -1,6 +1,6 @@
 import 'package:stay_points/stay_points.dart';
-import 'package:stay_points/src/identification/offline/offline_identification_impl.dart';
-import 'package:stay_points/src/identification/online/online_identification_imp.dart';
+import 'package:stay_points/src/identification/offline/offline_identification.dart';
+import 'package:stay_points/src/identification/online/online_identification.dart';
 
 class StayPointIdentification {
   bool get isAwesome => true;

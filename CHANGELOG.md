@@ -8,3 +8,7 @@ offline = grab a full path, at at the end process the list of locationspu
 ## 0.0.7
 
 - Minor update to fix README links
+
+## 0.0.8
+
+- Minor update adding some tests

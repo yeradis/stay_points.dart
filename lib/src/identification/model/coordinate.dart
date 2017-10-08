@@ -5,9 +5,7 @@ class LocationDegrees {
 
     LocationDegrees({this.degrees});
 
-    double toRadians() {
-        return this.degrees * (PI / 180.0);
-    }
+    double get inRadians => this.degrees * (PI / 180.0);
 }
 
 abstract class Coordinate {
