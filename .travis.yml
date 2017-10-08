@@ -12,7 +12,7 @@ script:
   - pub get
   - pub run test
   - pub global activate coverage
-  - dart --observe=8111 test/all.dart &
+  - dart --observe=8111 test/*.dart &
   - sleep 1
   - pub global run coverage:collect_coverage --port=8111 -o coverage.json --resume-isolates
   - pub global run coverage:format_coverage --package-root=packages --report-on lib --in coverage.json --out coverage.lcov --lcov
