@@ -3,7 +3,6 @@ dart:
   - dev
 
 dart_task:
-  - test
   - dartanalyzer: --fatal-warnings lib
 
 install:
