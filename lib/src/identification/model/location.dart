@@ -2,7 +2,7 @@ import 'package:great_circle_distance/great_circle_distance.dart';
 
 import 'coordinate.dart';
 
-class Location extends Coordinate {
+class Location extends Coordinate implements Comparable<Location> {
     DateTime timestamp;
 
     Location({latitude, longitude, this.timestamp})
@@ -25,4 +25,15 @@ class Location extends Coordinate {
         );
         return greatCircle.vincentyDistance();
     }
+
+    /**
+     * Compares this Location to [other], returning zero if the values are equal.
+     *
+     * Returns a negative integer if this `Location` is shorter than
+     * [other], or a positive integer if it is longer.
+     *
+     * A negative `Location` is always considered shorter than a positive one.
+     *
+     */
+    int compareTo(Location other) => this.latitude.degrees.compareTo(other.latitude.degrees) | this.longitude.degrees.compareTo(other.longitude.degrees);
 }

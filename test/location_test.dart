@@ -36,6 +36,15 @@ void main() {
         test('Having 41.139129 should return 0.7180 radians', () {
             expect(location1.latitude.inRadians, greaterThanOrEqualTo(0.7180));
         });
-        
+
+        test('Location1 should not be equal to Location2', () {
+            int comparison = location1.compareTo(location2);
+            expect(comparison, equals(-1));
+        });
+
+        test('Location1 should  be equal to Location1', () {
+            int comparison = location1.compareTo(location1);
+            expect(comparison, equals(0));
+        });
     });
 }
