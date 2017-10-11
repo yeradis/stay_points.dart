@@ -12,7 +12,5 @@ environment:
 
 dev_dependencies:
   test: ^0.12.0
-
-transformers:
-- test/pub_serve:
-    $include: test/**_test.dart
+  coverage: "^0.7.0"
+  dart_codecov_generator: "^0.4.0"
