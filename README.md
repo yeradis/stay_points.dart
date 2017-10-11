@@ -55,5 +55,5 @@ Disclaimer: This library is an implementation of the algorithm described in [Qua
 
 [1]: https://doi.org/10.1145/1463434.1463477
 [travis_status]: https://travis-ci.org/yeradis/stay_points.dart.svg?branch=master
-[coverage_page]:https://coveralls.io/github/yeradis/stay_points.dart?branch=master
+[coverage_page]: https://coveralls.io/github/yeradis/stay_points.dart?branch=master
 [coverage_status]: https://coveralls.io/repos/github/yeradis/stay_points.dart/badge.svg?branch=master
