@@ -18,3 +18,4 @@ script:
 
 after_success:
   - pub global run coveralls coverage.lcov
+  - bash <(curl -s https://codecov.io/bash)
