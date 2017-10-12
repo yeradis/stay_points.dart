@@ -12,3 +12,7 @@ offline = grab a full path, at at the end process the list of locationspu
 ## 0.0.9
 
 - Minor update to README
+
+## 0.10.0
+
+- Filter invalid coordinates (wrong latitude|longitude) before processing
