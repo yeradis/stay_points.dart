@@ -16,6 +16,9 @@ class OfflineIdentification implements OfflineRepository {
         int pStart = 0;
         int pEnd = 0;
 
+        locations = locations ?? result;
+        locations = locations.where((Location location) => location.isValid).toList();
+
         int pCount = locations != null ? locations.length : 0;
 
         if (pCount <= 1) {

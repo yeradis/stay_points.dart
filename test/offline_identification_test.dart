@@ -88,5 +88,29 @@ void main() {
                     && e.first.locationsInvolved.first.compareTo(stayPoint.location) == 0
                 )));
         });
+
+        test('Should return ONE StayPoint - Having three locations locations that pass the threshold validation (time, distance) BUT one of those have an invalid coordinate', () {
+
+            DateTime date1 = new DateTime(2017, 9, 27, 13, 06, 29);
+            Location location1 = new Location.fromDegrees(
+                latitude: 41.141903,
+                longitude: 1.401316,
+                timestamp: date1
+            );
+
+            DateTime date2 = new DateTime(2017, 9, 27, 13, 12, 11);
+            Location location2 = new Location.fromDegrees(
+                latitude: -122.4612387012154,
+                longitude: 1.401788,
+                timestamp: date2);
+
+            DateTime date3 = new DateTime(2017, 9, 27, 13, 16, 5);
+            Location location3 = new Location.fromDegrees(
+                latitude: 41.141183,
+                longitude: 1.401788,
+                timestamp: date3);
+
+            expect(extractor.process(locations: [location1, location2, location3]).length,equals(1));
+        });
     });
 }
