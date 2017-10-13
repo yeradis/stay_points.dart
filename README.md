@@ -1,4 +1,4 @@
-# Stay Points ![Travis status][travis_status] [![Coverage Status][coverage_status]][coverage_page]
+# Stay Points [![Pub][pub_version]](../../) ![Travis status][travis_status] [![Coverage Status][coverage_status]][coverage_page]
 
 Stay points/meaningful locations identification for Dart.
 
@@ -57,3 +57,4 @@ Disclaimer: This library is an implementation of the algorithm described in [Qua
 [travis_status]: https://travis-ci.org/yeradis/stay_points.dart.svg?branch=master
 [coverage_page]: https://coveralls.io/github/yeradis/stay_points.dart?branch=master
 [coverage_status]: https://coveralls.io/repos/github/yeradis/stay_points.dart/badge.svg?branch=master
+[pub_version]: https://img.shields.io/pub/v/stay_points.svg
