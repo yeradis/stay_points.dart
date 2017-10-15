@@ -6,6 +6,7 @@ author: Yeradis P. Barbosa Marrero <yeradis@gmail.com>
 
 dependencies:
   great_circle_distance: ^1.0.0
+  units: ^0.0.6
 
 environment:
   sdk: '>=1.20.1 <=2.0.0-dev.3.0'

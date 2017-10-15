@@ -2,13 +2,15 @@ import 'package:stay_points/stay_points.dart';
 import 'resources/sample_data.dart';
 import 'package:test/test.dart';
 
+import 'package:units/units.dart';
+
 void main() {
     group('Offline stay-point identification', () {
         StayPointIdentification extractor;
 
         setUp(() {
             Threshold threshold = new Threshold(
-                minimumTime: new Duration(minutes: 4), minimumDistance: new Distance(meters: 20.0));
+                minimumTime: new Duration(minutes: 4), minimumDistance: new Length.fromMeters(value: 20.0));
             extractor = new StayPointIdentification(threshold);
         });
 

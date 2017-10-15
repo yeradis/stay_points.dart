@@ -18,19 +18,19 @@ void main() {
         });
 
         test('Distance from location 1 to location 2 - Should return non zero', () {
-            expect(location1.distanceTo(location2), isNonZero);
+            expect(location1.distanceTo(location: location2).inMeters, isNonZero);
         });
 
         test('Distance from location 1 to location 2 - Should return non negative', () {
-            expect(location1.distanceTo(location2), isNonNegative);
+            expect(location1.distanceTo(location: location2).inMeters, isNonNegative);
         });
 
         test('Distance from location1 to same location should be Zero', () {
-            expect(location1.distanceTo(location1), isZero);
+            expect(location1.distanceTo(location: location1).inMeters, isZero);
         });
 
-        test('Distance from location1 to location2 shold be 8.529573134008796', () {
-            expect(location1.distanceTo(location2), greaterThanOrEqualTo(8.529573134008796));
+        test('Distance from location1 to location2 should be 8.534801', () {
+            expect(location1.distanceTo(location: location2).inMeters, equals(8.534801));
         });
 
         test('Having 41.139129 should return 0.7180 radians', () {

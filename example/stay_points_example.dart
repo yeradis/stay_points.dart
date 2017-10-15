@@ -1,7 +1,8 @@
 import 'package:stay_points/stay_points.dart';
+import 'package:units/units.dart';
 
 main() {
-    Threshold threshold = new Threshold(minimumTime: new Duration(minutes: 4), minimumDistance: new Distance(meters: 20.0));
+    Threshold threshold = new Threshold(minimumTime: new Duration(minutes: 4), minimumDistance: new Length.fromMeters(value: 20.0));
 
     var extractor = new StayPointIdentification(threshold);
     DateTime date1 = new DateTime(2017, 9, 27, 13, 06, 29);

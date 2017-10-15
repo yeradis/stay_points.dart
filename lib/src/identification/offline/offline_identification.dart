@@ -33,7 +33,7 @@ class OfflineIdentification implements OfflineRepository {
                 locationStart = locations[pStart];
                 locationEnd = locations[pEnd];
 
-                distance = locationStart.distanceTo(locationEnd);
+                distance = locationStart.distanceTo(location: locationEnd).inMeters;
                 bool validated = continueWithCurrent(current: locationEnd, previous: locations[pEnd - 1]);
 
                 if (validated && distance > threshold.minimumDistance.inMeters) {
