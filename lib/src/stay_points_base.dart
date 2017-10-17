@@ -5,6 +5,7 @@ import 'package:stay_points/src/identification/online/online_identification.dart
 class StayPointIdentification {
   bool get isAwesome => true;
   final Threshold threshold;
+  final OnlineIdentification _online = new OnlineIdentification();
 
   StayPointIdentification(this.threshold);
 
@@ -14,7 +15,6 @@ class StayPointIdentification {
   }
 
   StayPoint processBuffered({Location location}) {
-      OnlineIdentification online = new OnlineIdentification();
-      return online.process(threshold: this.threshold, location: location);
+      return _online.process(threshold: this.threshold, location: location);
   }
 }

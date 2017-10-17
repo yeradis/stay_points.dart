@@ -32,7 +32,20 @@ void main() {
             expect(extractor.processBuffered(location: location), isNull);
         });
 
-        test('Should return one Stay Point', () {
+        test('Should return one Stay Point from a list of two elements, none invalid', () {
+            List<Location> list = [];
+            list.addAll(SampleData.sample0_oneStaypoint());
+
+            int count = 0;
+            for (Location location in list) {
+                if (extractor.processBuffered(location: location) != null) {
+                    count += 1;
+                }
+            }
+            expect(count, greaterThan(0));
+        });
+
+        test('Should return one Stay Point from a list of three elements, one invalid', () {
             List<Location> list = [];
             list.addAll(SampleData.sample1_oneInvalid_oneStaypoint());
 
@@ -44,7 +57,6 @@ void main() {
             }
             expect(count, greaterThan(0));
         });
-
 
     });
 }
